@@ -38,6 +38,12 @@ have to be distinguished always use the basic / more general variable name in fr
 
 let o_person__hans = new O_person('hans', 20);
 let o_person__gretel = new O_person('gretel', '19'); 
+more exmaples
+for example an id is a very generic term so it comes first
+n_timeout_id wrong, correct: n_id__timeout
+n_frame_id wrong, correct: n_id__frame
+n_start_index wrong, correct: n_idx__start, respectively n_idx__end 
+n_timestamp_ms wrong, correct: n_ms__timestamp, or n_sec__timestamp or n_min__timestamp
 
 
 # complete example 
