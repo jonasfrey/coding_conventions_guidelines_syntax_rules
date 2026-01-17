@@ -235,3 +235,7 @@ let s_json__o_person = JSON.stringify(new O_person('hans', 20))
 let s_f_test = `()=>{return 'test'}`
 
 ```
+
+# additional
+do NOT: 'b_is_done'
+do: 'b_done'
