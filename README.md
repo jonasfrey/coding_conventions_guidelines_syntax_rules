@@ -88,8 +88,22 @@ let a_s_name = ['hans', 'gretel', 'ueli', 'jasmin'];
 
 let a_f_callback = [(s)=>{return `<div>${s}</div>`}, (n)=>{return n*2}]
 
-```
 
+```
+# data relations 
+
+since there are no plural words. there will be no table 'persons' but a table 'a_o_person'. 
+id's are named 'n_id' because id's will be simple integer numbers wherever possible , if this is not possible (for example PostgreSQL) 
+the id will be named 's_id' since this a uuid which includes characters not only digits. 
+the foreign key of an id will be called n_{object_name}_n_id
+so for example like this one person has many fingers. (one to many)
+O_person
+   -n_id, 
+   -s_name
+O_finger 
+   -n_o_person_n_id
+   -s_name
+   
 # naming order
 the more basic a thing is the more in front of the name it comes
 we do not do 'filtered_users' but 'a_o_user__filtered'
@@ -242,3 +256,4 @@ do: 'b_done'
 
 try to not use abbreviations if not needed. if a variable has a very long name that is absolutely ok. the name contains very important information, and this is more important than being lazy and not willing to write down many characters. 
 for example 'a_o_person__filtered' is a legit variable. do not try to make up new abbreviations!
+
