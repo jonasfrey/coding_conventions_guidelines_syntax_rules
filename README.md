@@ -67,6 +67,9 @@ let f_n_sum = function(n_a, n_b){
 let f_b_in_array = function(a_s, s){
    return a_s.includes(s);
 }
+let f_a_s = function(a_v_input){
+   return a_v_input.filter(v => typeof v !== 'string');
+}
 ```
 
 
@@ -140,6 +143,7 @@ let o_user__gretel = a_o_user__filtered[1];
 
 
 # abbreviations
+there are some abbreaviations that simply are like rules and have no other meaning but being static abbreviations that we agree on
 for width and height we always use 
 'width' => 'n_scl_x' 
 'height' => 'n_scl_y' 
@@ -228,6 +232,7 @@ let o_multidimensional = {
     s: 'this is a string', 
     a_v: [1,'string', true, {n:1}], 
     a_n: [1,2,3],
+    a_nu8__image: new Uint8Array(3*3*4),
     s_name: 'hans', 
     a_s_name: ['hans','gretel','jurg','olga'],
     o: {
@@ -245,8 +250,11 @@ let f_a_n_idx = function(){
 let f_add_numbers = function(n1, n2){return n1+n2}
 
 let s_json__o_person = JSON.stringify(new O_person('hans', 20))
+let o_person = JSON.parse(s_json__o_person)// 'unwrap' it
 
 let s_f_test = `()=>{return 'test'}`
+let f_test = new Function(s_f_test) // 'unwrap' it 
+
 
 ```
 
@@ -257,3 +265,4 @@ do: 'b_done'
 try to not use abbreviations if not needed. if a variable has a very long name that is absolutely ok. the name contains very important information, and this is more important than being lazy and not willing to write down many characters. 
 for example 'a_o_person__filtered' is a legit variable. do not try to make up new abbreviations!
 
+--- 
