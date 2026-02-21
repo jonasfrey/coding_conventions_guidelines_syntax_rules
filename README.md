@@ -265,4 +265,23 @@ do: 'b_done'
 try to not use abbreviations if not needed. if a variable has a very long name that is absolutely ok. the name contains very important information, and this is more important than being lazy and not willing to write down many characters. 
 for example 'a_o_person__filtered' is a legit variable. do not try to make up new abbreviations!
 
+## more examples bad/good
+this is a collection of bad naming examples that should be avoided
+function name 'f_s_generate__env_example' is bad, the word "generate" is not required because we know the function will return a string, just use 'f_s_env__example'
+
+```javascript
+//bad name
+let f_s_generate__env_example = function(s_uuid) {
+    return 'PORT=8000\n' +
+        'DB_PATH=./.gitignored/app.db\n' +
+        'STATIC_DIR=./localhost\n' +
+        `S_UUID=${s_uuid}\n`;
+};
+// good name
+let f_s_env__example = function(s_uuid) {
+   //...
+};
+`
+
+
 --- 

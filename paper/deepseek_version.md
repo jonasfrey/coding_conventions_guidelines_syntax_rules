@@ -3,7 +3,7 @@
 **Jonas Immanuel Frey**  
 Independent Researcher  
 First published: 2026  
-License: MIT  
+License: GPLv3
 
 ---
 
@@ -295,7 +295,6 @@ To prevent ad-hoc abbreviations, APN defines a mandatory glossary:
 | `trn` | translation (geometry) |
 | `scl` | scale (geometry) |
 | `rot` | rotation (geometry) |
-| `tau` | 2π (full circle) |
 
 Abbreviations outside this glossary are forbidden. A long variable name is preferable to an ambiguous abbreviation.
 
@@ -540,6 +539,6 @@ LOOP PATTERN
 
 **First published: 2026**  
 **Author: Jonas Immanuel Frey**  
-**License: MIT**  
+**License: GPLv3**  
 
 *This paper is available for citation. Please cite as: Frey, J.I. (2026). Abstract Prefix Notation (APN): A Type-Encoding Naming Methodology for Programming.*
