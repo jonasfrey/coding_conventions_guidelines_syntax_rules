@@ -281,7 +281,34 @@ let f_s_generate__env_example = function(s_uuid) {
 let f_s_env__example = function(s_uuid) {
    //...
 };
-`
+```
+---
+# 'normalized' and 'denormalized'
+```javascript
+// its called: 'normallized' 
+let o_student = {
+    n_id: 1, 
+    s_name: "Gretel"
+}
+let o_course = {
+    n_id: 1,
+    s_name: "Data Structures"
+}
+let o_student_o_course = {
+    n_o_student_id: 1,
+    n_o_course_id: 1
+};
 
 
---- 
+// its called: 'denormalized'
+let o_student = {
+    n_id: 1,
+    s_name: "Gretel",
+    a_o_course: [
+        {
+            n_id: 1,
+            s_name: "Data Structures"
+        }
+    ]
+}
+```
